@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chatbot</title>
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+	<img class ="foto_bot" src="{% static 'images/foto_bot.png' %}" alt="foto_bot">
+
+	<form  action="" method="post">
+	{% csrf_token %}
+		<!-- <input class = 'input_1' type="text"  name='user_answer'  >
+		<input class = 'input_1' type="submit" value ='send your answer'> -->
+		<div class='user_answer''>{{form.as_p}}</div>
+		</form>
+	<div class='balloon'><span class ='word_bot'>Bot: </span>{{word}}</div>
+	<div>{{answer}}</div>
+</body>
+</html>
